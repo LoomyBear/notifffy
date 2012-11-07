@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lint>
+    <issue id="NewApi">
+        <ignore path="src/example/notifffy/NotifffyWidget.java" />
+        <ignore path="src/example/notifffy/SettingsActivity.java" />
+    </issue>
+</lint>

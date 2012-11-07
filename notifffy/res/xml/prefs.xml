@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory 
+        android:title="@string/account_category_title"
+        android:key="pref_key_account_settings">
+	    <EditTextPreference
+	        android:key="user_name"
+	        android:title="@string/user_name"
+	        android:summary="@string/user_name_summ"
+	        android:defaultValue="" />
+	</PreferenceCategory>
+    <PreferenceCategory 
+        android:title="@string/activity_category_title"
+        android:key="pref_key_activity_settings">
+        <CheckBoxPreference
+	        android:key="autorefresh_switch"
+	        android:title="@string/autorefresh_switch"
+	        android:summary="@string/autorefresh_switch_summ"
+	        android:defaultValue="true" />
+	    <ListPreference
+	        android:dependency="autorefresh_switch"
+	        android:key="refresh_rate"
+	        android:title="@string/activity_refresh_rate_title"
+	        android:dialogTitle="@string/activity_refresh_rate_dialog_title"
+	        android:entries="@array/activity_refresh_rate_array"
+	        android:entryValues="@array/activity_refresh_rate_array_vals"
+	        android:defaultValue="@string/activity_refresh_rate_default" />
+	</PreferenceCategory>
+	<PreferenceCategory 
+        android:title="@string/notification_category_title"
+        android:key="pref_key_notification_settings">
+		<CheckBoxPreference
+	        android:key="notification_switch"
+	        android:title="@string/notification_switch"
+	        android:summary="@string/notification_switch_summ"
+	        android:defaultValue="true" />
+	     <CheckBoxPreference
+	        android:dependency="notification_switch"
+	        android:key="notification_sound"
+	        android:title="@string/notification_sound"
+	        android:summary="@string/notification_sound_summ"
+	        android:defaultValue="true" />
+	     <!-- <CheckBoxPreference
+	        android:dependency="notification_switch"
+	        android:key="notification_vibration"
+	        android:title="@string/notification_vibration"
+	        android:summary="@string/notification_vibration_summ"
+	        android:defaultValue="true" /> -->
+	  </PreferenceCategory>
+</PreferenceScreen>

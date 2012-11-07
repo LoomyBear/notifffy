@@ -1,0 +1,45 @@
+<resources>
+
+    <string name="app_name">notifffy</string>
+    <string name="menu_settings">Settings</string>
+    <string name="title_activity_notifffy_widget">notifffy</string>
+    <string name="title_activity_notifffy_widget_settings">notifffy settings</string>
+    
+    <string name="widget_startup_text">Specify your dribbble username</string>
+    
+    <string name="intro_text">But first of all you should specify your username in the settings!</string>
+    <string name="widget_refresh">Widget is refreshing. Please wait &#8230;</string>
+    
+    <!-- Preferences -->
+	<string name="account_category_title">Account Settings</string>
+	<string name="user_name">Dribbble Username</string>
+    <string name="user_name_summ">Specify your dribbble username</string>
+    
+    <string name="activity_category_title">Connection Settings</string>
+    <string name="autorefresh_switch">Auto Refresh</string>
+    <string name="autorefresh_switch_summ">Enable automatic refresh</string>
+    <string name="activity_refresh_rate_title">Activity Refresh Rate</string>
+    <string name="activity_refresh_rate_dialog_title">Setup Refresh Interval</string>
+    <string-array name="activity_refresh_rate_array">
+        <item>15 minutes</item>
+        <item>30 minutes</item>
+        <item>60 minutes</item>
+    </string-array>
+    <string-array name="activity_refresh_rate_array_vals">
+        <item>15</item>
+        <item>30</item>
+        <item>60</item>
+    </string-array>    
+    <string name="activity_refresh_rate_default">30</string>
+    
+    
+    <string name="notification_category_title">Status notifications</string>
+    <string name="notification_switch">Show Notifications</string>
+    <string name="notification_switch_summ">Enable notifications</string>
+    <string name="notification_sound">Sound Notification</string>
+    <string name="notification_sound_summ">Play sound when new activity arrives</string>
+    <string name="notification_vibration">Vibration</string>
+    <string name="notification_vibration_summ">Alert activity with a vibration</string>
+    
+</resources>
+

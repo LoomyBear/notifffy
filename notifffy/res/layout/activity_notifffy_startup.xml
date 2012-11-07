@@ -1,0 +1,48 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/notifffy_widget_intro_back"
+    android:gravity="top"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:scaleType="fitCenter" >
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top"
+        android:gravity="top"
+        android:src="@drawable/notifffy_widget_intro_img"
+        android:scaleType="fitCenter" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="bottom"
+        android:padding="10dp"
+        android:layout_marginBottom="65dp" >
+        
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/intro_text"
+                android:textColor="#FFFFFF"
+                android:textSize="16dp" />
+	
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="bottom"
+        android:padding="10dp" >
+
+            <Button
+                android:id="@+id/settings_button"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Go to settings" />
+            
+	</RelativeLayout>
+</RelativeLayout>

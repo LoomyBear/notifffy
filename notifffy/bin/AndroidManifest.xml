@@ -1,0 +1,60 @@
+<manifest package="lunchcode.notifffy"
+    android:versionCode="2"
+    android:versionName="1.02" xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="15" />
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <application
+        android:icon="@drawable/ic_launcher_notifffy"
+        android:label="@string/app_name"
+        android:theme="@android:style/Theme.DeviceDefault.Wallpaper.NoTitleBar" >
+        
+        <activity
+            android:name=".NotifffyWidget"
+            android:label="@string/title_activity_notifffy_widget" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+        <activity
+            android:name="SettingsActivity"
+            android:enabled="TRUE"
+            android:label="@string/title_activity_notifffy_widget_settings"
+            android:theme="@android:style/Theme.DeviceDefault" >
+        </activity>
+        
+        <activity
+            android:name="DeprSettingsActivity"
+            android:enabled="TRUE"
+            android:label="@string/title_activity_notifffy_widget_settings"
+            android:theme="@android:style/Theme.DeviceDefault" >
+        </activity>
+        
+        <receiver
+		       android:icon="@drawable/notifffy_widget_launcher_back"
+		       android:label="notifffy"
+		       android:name="MyWidgetProvider" >
+		       <intent-filter>
+		            <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+		            <action android:name="lunchcode.notifffy.MyWidgetProvider.ACTION_WIDGET_REFRESH"/>
+		            <action android:name="lunchcode.notifffy.MyWidgetProvider.ACTION_WIDGET_SETTINGS"/>
+		            <action android:name="lunchcode.notifffy.MyWidgetProvider.ACTION_WIDGET_USER"/>
+		            <action android:name="lunchcode.notifffy.MyWidgetProvider.ACTION_WIDGET_MAIN"/>
+		            <action android:name="lunchcode.notifffy.MyWidgetProvider.ACTION_WIDGET_ACTIVITY"/>
+		        </intent-filter>
+		       <meta-data
+		          android:name="android.appwidget.provider"
+		          android:resource="@xml/widget" />
+		</receiver>
+		
+        <service android:name=".UpdateWidgetService"></service> 
+        <service android:name=".ActivityWidgetService"></service> 
+        
+    </application>
+
+</manifest>
