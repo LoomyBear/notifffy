@@ -39,7 +39,6 @@ import android.preference.PreferenceManager;
 import android.util.Log;
 import android.view.View;
 import android.widget.RemoteViews;
-import android.widget.Toast;
 
 public class UpdateWidgetService extends Service {
 
