@@ -23,12 +23,18 @@ public class MyWidgetProvider extends AppWidgetProvider {
 	public static String ACTION_WIDGET_ACTIVITY = "ActionReceiverActivity";
 	public static String ACTION_WIDGET_USER = "ActionReceiverUser";
 	public static String ACTION_WIDGET_MAIN = "ActionReceiverMain";
-
+	
+	public void onEnabled(Context context, AppWidgetManager appWidgetManager, int[] appWidgetIds) {
+		
+	}
+	
 	@Override
 	public void onUpdate(Context context, AppWidgetManager appWidgetManager, int[] appWidgetIds) {
 
 		// SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(_context);
 		// String pref_username = sharedPref.getString("user_name", "");
+		
+		// Binding actions to the buttons
 		
 		RemoteViews remoteViews = new RemoteViews(context.getPackageName(),R.layout.widget_layout);
 
@@ -60,6 +66,11 @@ public class MyWidgetProvider extends AppWidgetProvider {
 		actionPendingIntent = PendingIntent.getBroadcast(context, 0,active, 0);
 		remoteViews.setOnClickPendingIntent(R.id.logo, actionPendingIntent);
 
+		// Commit widget changes
+		appWidgetManager.updateAppWidget(appWidgetIds, remoteViews);
+		
+		// Refreshing procedures ...
+
 		// Get all ids
 		ComponentName thisWidget = new ComponentName(context,MyWidgetProvider.class);
 		int[] allWidgetIds = appWidgetManager.getAppWidgetIds(thisWidget);
@@ -70,9 +81,6 @@ public class MyWidgetProvider extends AppWidgetProvider {
 
 		// Update the widgets via the service
 		context.startService(refreshIntent);
-
-		// Commit widget changes
-		appWidgetManager.updateAppWidget(appWidgetIds, remoteViews);
 
 	}
 
