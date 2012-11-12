@@ -1,3 +1,5 @@
+//Hello fuckin' World!
+
 package lunchcode.notifffy;
 
 import java.io.BufferedReader;
